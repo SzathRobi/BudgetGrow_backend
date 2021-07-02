@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "transactions",
+  "info": {
+    "name": "transaction",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "amount": {
+      "type": "integer"
+    },
+    "income": {
+      "type": "boolean"
+    },
+    "user": {
+      "via": "transactions",
+      "plugin": "users-permissions",
+      "model": "user"
+    }
+  }
+}

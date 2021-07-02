@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "settings",
+  "info": {
+    "name": "setting",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "income": {
+      "type": "integer"
+    },
+    "expense": {
+      "type": "integer"
+    },
+    "user": {
+      "via": "settings",
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "current": {
+      "type": "integer"
+    }
+  }
+}
