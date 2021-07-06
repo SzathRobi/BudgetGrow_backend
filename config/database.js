@@ -1,19 +1,22 @@
 module.exports = ({ env }) => ({
-  defaultConnection: 'default',
+  defaultConnection: "default",
   connections: {
     default: {
-      connector: 'mongoose',
+      connector: "mongoose",
       settings: {
-        host: env('DATABASE_HOST', 'budgetgrow.ngwsh.mongodb.net'),
-        srv: env.bool('DATABASE_SRV', true),
-        port: env.int('DATABASE_PORT', 27017),
-        database: env('DATABASE_NAME', 'budgetGrow'),
-        username: env('DATABASE_USERNAME', 'Vatu'),
-        password: env('DATABASE_PASSWORD', 'Medvefarm98'),
+        host: env(
+          "DATABASE_HOST",
+          "budgetgrow.ngwsh.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
+        ), //it was "budgetgrow.ngwsh.mongodb.net"
+        srv: env.bool("DATABASE_SRV", true),
+        port: env.int("DATABASE_PORT", 27017),
+        database: env("DATABASE_NAME", "budgetGrow"),
+        username: env("DATABASE_USERNAME", "Vatu"),
+        password: env("DATABASE_PASSWORD", "Medvefarm98"),
       },
       options: {
-        authenticationDatabase: env('AUTHENTICATION_DATABASE', null),
-        ssl: env.bool('DATABASE_SSL', true),
+        authenticationDatabase: env("AUTHENTICATION_DATABASE", null),
+        ssl: env.bool("DATABASE_SSL", true),
       },
     },
   },
