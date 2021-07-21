@@ -25,6 +25,10 @@
       "via": "transactions",
       "plugin": "users-permissions",
       "model": "user"
+    },
+    "categories": {
+      "via": "transaction",
+      "collection": "category"
     }
   }
 }
