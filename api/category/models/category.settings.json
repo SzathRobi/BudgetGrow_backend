@@ -15,9 +15,9 @@
     "name": {
       "type": "string"
     },
-    "transaction": {
-      "model": "transaction",
-      "via": "categories"
+    "transactions": {
+      "collection": "transaction",
+      "via": "category"
     }
   }
 }

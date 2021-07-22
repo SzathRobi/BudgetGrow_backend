@@ -26,9 +26,9 @@
       "plugin": "users-permissions",
       "model": "user"
     },
-    "categories": {
-      "via": "transaction",
-      "collection": "category"
+    "category": {
+      "via": "transactions",
+      "model": "category"
     }
   }
 }
